@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #00A9F6;">
+			<h1 class="mui-title">个人中心</h1>
+		</header>
+		<div class="mui-content">
+
+		<!-- <form class="mui-input-group">
+			<div class="mui-input-row">
+				<label>用户名</label>
+			<input type="text" class="mui-input-clear" placeholder="请输入用户名">
+			</div>
+			<div class="mui-input-row">
+				<label>密码</label>
+				<input type="password" class="mui-input-password" placeholder="请输入密码">
+			</div>
+			<div class="mui-button-row">
+				<button type="button" class="mui-btn mui-btn-primary" >确认</button>
+				<button type="button" class="mui-btn mui-btn-danger" >取消</button>
+			</div>
+		</form> -->
+		<div id="notifications_disturb" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left"><span class="mui-icon mui-icon-left-nav"></span>新消息通知</button>				
+				<h1 class="mui-center mui-title">功能消息免打扰</h1>			
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<ul class="mui-table-view mui-table-view-radio">
+							<li class="mui-table-view-cell"><a class="mui-navigate-right">开启</a></li>
+							<li class="mui-table-view-cell"><a class="mui-navigate-right">只在夜间开启</a></li>
+							<li class="mui-table-view-cell"><a class="mui-navigate-right">关闭</a></li>
+						</ul>
+					</div>				
+				</div>			
+				</div>
+			</div>
+			<div id="privacy" class="mui-page">			
+				<div class="mui-navbar-inner mui-bar mui-bar-nav">
+					<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+						<span class="mui-icon mui-icon-left-nav"></span>设置	</button>
+						<h1 class="mui-center mui-title">隐私</h1>
+				</div>			
+				<div class="mui-page-content">
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-divider">通讯录</li>
+								<li class="mui-table-view-cell">加我为朋友时需要验证
+									<div class="mui-switch mui-active mui-switch-mini">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</li>
+							</ul>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">向我推荐QQ好友
+									<div class="mui-switch mui-switch-mini">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</li>
+								<li class="mui-table-view-cell">通过QQ号搜索到我
+									<div class="mui-switch mui-switch-mini">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</li>
+							</ul>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">可通过手机号搜索到我
+									<div class="mui-switch mui-active mui-switch-mini">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</li>
+								<li class="mui-table-view-cell">向我推荐通讯录朋友
+									<div class="mui-switch mui-switch-mini">
+										<div class="mui-switch-handle"></div>
+									</div>
+								</li>
+								<li class="mui-table-view-divider">开启后，为你推荐已经开通HBuilder的手机联系人</li>
+							</ul>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell">通过HBuilder账号搜索到我
+									<div class="mui-switch mui-active mui-switch-mini">	
+										<div class="mui-switch-handle"></div>
+									</div>
+								</li>
+								<li class="mui-table-view-divider">关闭后，其他用户将不能通过HBuilder号搜索到你</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init({			
+					subpages:[			
+						//首先加载首页			
+						{			
+							url:'page/home.html',			
+							id:'tab_home',			
+							styles:{			
+			                        top:'0px',  		
+			                        bottom:'60px'                          			
+							}			
+						}			
+					],			
+					     preloadPages:[//预加载其他页面  			
+			            {  			
+			                url:'page/inventory.html',  			
+			                id:'tab_inventory' ,			
+			                styles:{			
+			                        top:'0px',  			
+			                        bottom:'60px'                          			
+							}		
+			            },  			
+			            {  			
+			                url:'page/number.html',  			
+			                id:'tab_statistics',			
+			                styles:{			
+			                        top:'0px',  			
+			                        bottom:'60px'                          		
+							}			
+			            },		
+			            {			
+			            	url:'page/setting.html',			
+			            	id:'tab_myinfo',			
+			            	styles:{			
+			                        top:'0px',  			
+			                        bottom:'60px'                          			
+							}			
+			            }			
+			        ]			
+				});			
+			  	mui.plusReady(function(){			
+			        var arr =document.getElementsByClassName("mui-tab-item");			
+			        var objYe = ["page/home.html","page/inventory.html","page/number.html","page/setting.html"];			
+			        var objStyle = {top:"0px",bottom:"60px"};			
+			        var objs=[];			
+			        var self = plus.webview.currentWebview();//取到当前的主页窗口			
+			        for (var i=0;i<arr.length;i++){			
+			            !function(i){			
+				            var obj = plus.webview.create(objYe[i],objYe[i],objStyle);			
+				            objs.push(obj);		        			
+				            arr[i].addEventListener("tap",function(){			
+				                for(var j=0;j<arr.length;j++){			
+				                    if(j!=i){objs[j].hide()}			
+				                    else{objs[j].show()}			
+				                }		
+				                self.append(objs[i])			
+				             })			
+			             }(i)			
+			        }			
+			         mui.trigger(arr[0],"tap"); 		
+			    })
+			</script>
+
+	</body>
+</html>

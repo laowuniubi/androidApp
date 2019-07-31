@@ -1,0 +1,209 @@
+
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>统计页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav" style="background-color: #00A9F6;">
+			<h1 class="mui-title">统计</h1>
+		</header>
+		
+		<!--下拉刷新容器-->
+<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+  <div class="mui-content">
+	  <!--轮播图片-->
+	  				 	
+	  <div id="slider" class="mui-slider" style="height: 120px;">
+	  				 	
+	  	<div class="mui-slider-group mui-slider-loop">
+	  				 	
+	  		<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	  				 	
+	  		<div class="mui-slider-item mui-slider-item-duplicate">
+	  				 	
+	  			<a href="#">
+	  				 	
+	  				<img src="../img/t1.jpg">
+	  				 	
+	  			</a>
+	  				 	
+	  		</div>
+	  				 	
+	  		<!-- 第一张 -->
+	  				 	
+	  		<div class="mui-slider-item">
+	  				 	
+	  			<a href="#">
+	  				 	
+	  				<img src="../img/t2.jpg">
+	  				 	
+	  			</a>
+	  				 	
+	  		</div>
+	  				 	
+	  		<!-- 第二张 -->
+	  				 	
+	  		<div class="mui-slider-item">
+	  				 	
+	  			<a href="#">
+	  				 	
+	  				<img src="../img/t3.jpg">
+	  				 	
+	  			</a>
+	  				 	
+	  		</div>
+	  				 	
+	  		<!-- 第三张 -->
+	  				 	
+	  		<div class="mui-slider-item">
+	  				 	
+	  			<a href="#">
+	  				 	
+	  				<img src="../img/t1.jpg">
+	  				 	
+	  			</a>
+	  				 	
+	  		</div>
+	  				 	
+	  		<!-- 第四张 -->
+	  				 	
+	  		<div class="mui-slider-item">
+	  				 	
+	  			<a href="#">
+	  				 	
+	  				<img src="../img/t4.jpg">
+	  				 	
+	  			</a>
+	  				 	
+	  		</div>
+	  				 	
+	  		<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+	  				 	
+	  		<div class="mui-slider-item mui-slider-item-duplicate">
+	  				 	
+	  			<a href="#">
+	  				 	
+	  				<img src="../img/a.jpg">
+	  				 	
+	  			</a>
+	  				 	
+	  		</div>
+	  				 	
+	  	</div>
+	  				 	
+	  	<div class="mui-slider-indicator">
+	  				 	
+	  		<div class="mui-indicator mui-active"></div>
+	  				 	
+	  		<div class="mui-indicator"></div>
+	  				 	
+	  		<div class="mui-indicator"></div>
+	  				 	
+	  		<div class="mui-indicator"></div>
+	  				 	
+	  	</div>
+	  				 	
+	  </div>
+  	<ul class="mui-table-view">
+  		<li class="mui-table-view-cell mui-media">
+  			<a href="javascript:;">
+  				<img class="mui-media-object mui-pull-left" src="../img/timg.jpg">
+  				<div class="mui-media-body">
+  					销售总额
+  					<p class='mui-ellipsis'>单月全部卖出的额度</p>
+  				</div>
+  			</a>
+  		</li>
+  		<li class="mui-table-view-cell mui-media">
+  			<a href="javascript:;">
+  				<img class="mui-media-object mui-pull-left" src="../img/timg2.jpg">
+  				<div class="mui-media-body">
+  					单件最高盈利
+  					<p class='mui-ellipsis'>是否考虑多多备货</p>
+  				</div>
+  			</a>
+  		</li>
+  		<li class="mui-table-view-cell mui-media">
+  			<a href="javascript:;">
+  				<img class="mui-media-object mui-pull-left" src="../img/time3.jpg">
+  				<div class="mui-media-body">
+  					本月盈利
+  					<p class='mui-ellipsis'>赚的多永远是商人的第一目标</p>
+  				</div>
+  			</a>
+  		</li>
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-left" src="../img/timg5.jpg">
+				<div class="mui-media-body">
+					单月进货统计
+					<p class='mui-ellipsis'>适合才是最好的</p>
+				</div>
+			</a>
+		</li>
+  	</ul>
+  
+  	</div>
+</div>
+		<!-- <div class="mui-content">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/timg.jpg">
+						<div class="mui-media-body">
+							销售总额
+							<p class='mui-ellipsis'>单月全部卖出的额度</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/timg2.jpg">
+						<div class="mui-media-body">
+							单件最高盈利
+							<p class='mui-ellipsis'>是否考虑多多备货</p>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media">
+					<a href="javascript:;">
+						<img class="mui-media-object mui-pull-left" src="../img/time3.jpg">
+						<div class="mui-media-body">
+							本月盈利
+							<p class='mui-ellipsis'>赚的多永远是商人的第一目标</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			</div> -->
+
+		<script src="../js/mui.min.js"></script>
+
+		<script type="text/javascript">
+
+			mui.init({
+  pullRefresh : {
+    container:"#refreshContainer",//下拉刷新容器标识，querySelector能定位的css选择器均可，比如：id、.class等
+    down : {
+      height:50,//可选,默认50.触发下拉刷新拖动距离,
+      auto: true,//可选,默认false.首次加载自动下拉刷新一次
+      contentdown : "下拉可以刷新",//可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+      contentover : "释放立即刷新",//可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+      contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+      callback :pullfresh-function //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+    }
+  }
+});
+	
+
+
+		</script>
+
+	</body>
+</html>

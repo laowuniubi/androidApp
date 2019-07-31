@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>首页九宫格页面</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+ 
+
+		<!--标准mui.css-->
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+
+		<!--App自定义的css-->
+
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+
+		<style>
+			.a{
+				margin-left:120px;
+				}
+				.c{
+					margin-left:112px;
+					}
+				.b{
+					margin-left: 14px;
+				}
+				.d{
+					margin-left: 18px;
+				}
+		</style>
+	</head>
+
+	
+
+	<body>
+		<!-- 主界面移动、菜单不动 -->
+		<div class="mui-off-canvas-wrap mui-draggable">
+		  <!-- 菜单容器 -->
+		  <aside class="mui-off-canvas-left" id="offCanvasSide" style="background-image: url(../img/timg4.jpg);color: white;">
+		      <div class="mui-scroll-wrapper" style="margin-bottom: 25px;">
+		          <div class="mui-scroll userAvatar">
+		              <!-- 菜单具体展示内容 -->
+		              <ul class="mui-table-view" style="background-color: transparent;margin-top: 45px;border: 0 none;">
+		                  <li class="mui-table-view-cell mui-media">
+		                      <a href="javascript:;">
+		                          <img class="mui-media-object mui-pull-left" src="../img/head.jpg" style="border-radius: 50%;border: 2px solid white;max-width: 60px;height: 60px;">
+		                          <div class="mui-media-body" style="margin-top: 10px;">
+		                              Yellow
+		                              <div>
+		                                  
+		                                  <i class="fa fa-star" aria-hidden="true" style="color: #AA7B51;"></i>
+		                                  <i class="fa fa-star" aria-hidden="true" style="color: #AA7B51;"></i>
+		                                  <i class="fa fa-star" aria-hidden="true" style="color: #AA7B51;"></i>
+		                              </div>
+		                          </div>
+		                      </a>
+		                  </li>
+		                  <li class="mui-table-view-cell">
+							  个性签名：
+		                      <a href="javascript:;">
+		                          思想不纯洁，怪我咯？
+		                      </a>
+		                  </li>
+		              </ul>
+		              <div class="mem-nav-h" style="background-color: transparent";>
+		                  <div class="c">
+		                      <div class="d">5</div>
+		                      <div>联系人</div>
+		                  </div>
+		                  <div class="a">
+		                      <div class="b">3</div>
+		                      <div>图片</div>
+		                  </div>
+		                  <div class="a">
+		                      <div class="b">2</div>
+		                      <div>日志</div>
+		                  </div>
+		                  <div class="a">
+		                      <div class="b">0</div>
+		                      <div>视频</div>
+		                  </div>
+		              </div>
+		              <ul class="mui-table-view" style="background-color: transparent;">
+		              	<li class="mui-table-view-cell" id="setting"><a class="mui-navigate-right">设置</a></li> 
+		       
+		                  <li class="mui-table-view-cell" id="feedback"><a class="mui-navigate-right">问题反馈</a></li>
+		              </ul>
+		  		</div>
+		  		
+		  	</div>
+		  </aside>
+		  <!-- 主页面容器 -->
+		  <div class="mui-inner-wrap">
+			<!-- 主页面标题 -->
+			<!-- <nav class="mui-bar mui-bar-tab" id="nav">		
+				<a class="mui-tab-item mui-active" href="home.html" id="tab_home">		
+					<span class="mui-icon mui-icon-home"></span>		
+					<span class="mui-tab-label">首页</span>		
+				</a>		
+				<a class="mui-tab-item" id="tab_inventory">		
+					<span class="mui-icon mui-icon-email"></span>		
+					<span class="mui-tab-label">库存</span>		
+				</a>	
+				<a class="mui-tab-item" id="tab_statistics">		
+					<span class="mui-icon mui-icon-contact"></span>		
+					<span class="mui-tab-label">统计</span>		
+				</a>		
+				<a class="mui-tab-item" id="tab_myinfo">		
+					<span class="mui-icon mui-icon-gear"></span>		
+					<span class="mui-tab-label">我的</span>
+				</a>
+			</nav> -->
+			<div class="mui-content mui-scroll-wrapper">
+			  <div class="mui-scroll">
+				<!-- 主界面具体展示内容 -->
+				 	<header class="mui-bar mui-bar-nav" style="background-color: #00A9F6;">
+				 	
+				 		<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"  href="#offCanvasSide" ></a>
+				 	
+				 		<div class="mui-input-row mui-search" style="position: absolute;left: 80px;">
+				 	
+				 			<input type="search" class="mui-input-clear" placeholder="商品、订单、库存">
+				 	
+				 		</div>
+				 	
+				 	</header>
+				 	
+				 	<div class="mui-content">
+				 	
+				 		<!--轮播图片-->
+				 	
+				 		<div id="slider" class="mui-slider" style="height: 120px;">
+				 	
+				 			<div class="mui-slider-group mui-slider-loop">
+				 	
+				 				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+				 	
+				 				<div class="mui-slider-item mui-slider-item-duplicate">
+				 	
+				 					<a href="#">
+				 	
+				 						<img src="../img/a.jpg">
+				 	
+				 					</a>
+				 	
+				 				</div>
+				 	
+				 				<!-- 第一张 -->
+				 	
+				 				<div class="mui-slider-item">
+				 	
+				 					<a href="#">
+				 	
+				 						<img src="../img/b.jpg">
+				 	
+				 					</a>
+				 	
+				 				</div>
+				 	
+				 				<!-- 第二张 -->
+				 	
+				 				<div class="mui-slider-item">
+				 	
+				 					<a href="#">
+				 	
+				 						<img src="../img/d.jpg">
+				 	
+				 					</a>
+				 	
+				 				</div>
+				 	
+				 				<!-- 第三张 -->
+				 	
+				 				<div class="mui-slider-item">
+				 	
+				 					<a href="#">
+				 	
+				 						<img src="../img/a.jpg">
+				 	
+				 					</a>
+				 	
+				 				</div>
+				 	
+				 				<!-- 第四张 -->
+				 	
+				 				<div class="mui-slider-item">
+				 	
+				 					<a href="#">
+				 	
+				 						<img src="../img/e.jpg">
+				 	
+				 					</a>
+				 	
+				 				</div>
+				 	
+				 				<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+				 	
+				 				<div class="mui-slider-item mui-slider-item-duplicate">
+				 	
+				 					<a href="#">
+				 	
+				 						<img src="../img/a.jpg">
+				 	
+				 					</a>
+				 	
+				 				</div>
+				 	
+				 			</div>
+				 	
+				 			<div class="mui-slider-indicator">
+				 	
+				 				<div class="mui-indicator mui-active"></div>
+				 	
+				 				<div class="mui-indicator"></div>
+				 	
+				 				<div class="mui-indicator"></div>
+				 	
+				 				<div class="mui-indicator"></div>
+				 	
+				 			</div>
+				 	
+				 		</div>
+				 	
+				 		
+				 	
+				 		<br/>
+				 	
+				 		<!--9宫格-->
+				 	
+				 	    <ul class="mui-table-view mui-grid-view mui-grid-9">
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-home"></span>
+				 	
+				 	                <div class="mui-media-body">商品管理</div></a></li>
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-email"><span class="mui-badge">5</span></span>
+				 	
+				 	                <div class="mui-media-body">采购单</div></a></li>
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-chatbubble"></span>
+				 	
+				 	                <div class="mui-media-body">销售单</div></a></li>		                 
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-location"></span>
+				 	
+				 	                <div class="mui-media-body">客户管理</div></a></li>
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-search"></span>
+				 	
+				 	                <div class="mui-media-body">库存管理</div></a></li>
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-phone"></span>
+				 	
+				 	                <div class="mui-media-body">订单管理</div></a></li>
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-gear"></span>
+				 	
+				 	                <div class="mui-media-body">账务管理</div></a></li>
+				 	
+				 	        <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-info"></span>
+				 	
+				 	                <div class="mui-media-body">统计管理</div></a></li>
+				 	
+				 	       <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><a href="#">
+				 	
+				 	                <span class="mui-icon mui-icon-more"></span>
+				 	
+				 	                <div class="mui-media-body">系统管理</div></a></li>
+				 	
+				 	    </ul> 
+				 	
+				 	</div>
+			  </div>
+			  
+			</div> 
+			<div class="mui-off-canvas-backdrop"></div>
+		  </div> 
+		</div>
+		
+
+	</body>
+
+	<script src="../js/mui.min.js"></script>
+
+	<script>
+
+		mui.init({
+
+			swipeBack:true //启用右滑关闭功能
+
+		});
+
+		
+
+		//图片轮播
+
+		var slider = mui("#slider");
+
+		slider.slider({
+
+			interval: 5000
+
+		});
+
+	</script>
+
+</html>
